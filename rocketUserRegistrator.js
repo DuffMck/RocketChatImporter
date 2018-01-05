@@ -122,6 +122,11 @@ module.exports = function (username, password, host, csvPath, extraOptions) {
         if (extraOptions.verified) baseBody.verified = extraOptions.verified;
     }
 
+    var logDir = "./logs";
+    if (!fs.existsSync(logDir)){
+        fs.mkdirSync(logDir);
+    }
+
 
     executeAuthenticatedCalls(username, password, host, function (userId, authTocket) {
         console.log(`User ${userId} Token ${authTocket}`);

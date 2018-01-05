@@ -11,7 +11,9 @@ In this repo there's an example (users.csv), and as you can see __there's not an
 ## Execute
 - Create your CSV file or edit the example's one.
 - Go into __index.js__ and change function parameters (__credentials must be from an admin user__)
-- From terminal go to project directory and execute `node index.js`
+- From terminal go to project directory and:
+    - execute `npm install` in order to get all dependencies
+    - execute `node index.js` to run the script
 
 ## Log
 Inside the `${project_root}/log/` folder you will find two files with results and server response:
